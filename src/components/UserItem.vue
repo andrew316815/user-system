@@ -10,6 +10,7 @@
       li(
         v-for="user, idx in userInfo"
         :key="user.id"
+        :class="{ blocked: !user.completed }"
       ) {{ user.title }}
 </template>
 
@@ -53,4 +54,5 @@ const userId = computed( () => props.userInfo[0].userId )
 
 li
   font-size: 14px
+  text-align: left
 </style>

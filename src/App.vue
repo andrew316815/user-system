@@ -40,6 +40,6 @@ nav
 
 .blocked
   pointer-events: none
-  opacity: 0.7
+  opacity: 0.5
 
 </style>
