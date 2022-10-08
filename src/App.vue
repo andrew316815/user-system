@@ -2,7 +2,7 @@
 .app
   nav
     router-link( to="/" ) Пользователи
-    router-link( to="/graphics") График  
+    router-link( to="/chart") График  
   router-view
 </template>
 

@@ -21,7 +21,7 @@ export default createStore({
       try {
         const response = await fetch( 'https://jsonplaceholder.typicode.com/todos' )
         const users: Array<UserItem> = await response.json()
-        if ( users ) this.commit( 'setUsers', users )
+        this.commit( 'setUsers', users )
       } catch ( error ) {
         console.log( error )
       }

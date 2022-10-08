@@ -5,7 +5,7 @@ export interface UserItem {
   userId: number
 }
 
-export type GrouppedUser = {
+export type GrouppedUsers = {
   [key:number]: Array<UserItem> 
 }
 

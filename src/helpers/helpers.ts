@@ -1,8 +1,8 @@
-import { CompletedUser, GrouppedUser, UserItem } from '@/types'
-import { isTemplateNode } from '@vue/compiler-core'
+import { CompletedUser, GrouppedUsers, UserItem } from '@/types'
 
-export const groupBy = ( arr: Array<UserItem> ): Array<CompletedUser> => {
-  const grouppedUsers: GrouppedUser = arr.reduce( ( acc: GrouppedUser, value ) => {
+// функция группировки и последующей сортировки массива пользователей 
+export const groupBy = ( users: Array<UserItem> ): Array<CompletedUser> => {
+  const grouppedUsers: GrouppedUsers = users.reduce( ( acc: GrouppedUsers, value ) => {
     if ( !acc[value.userId]) {
       acc[value.userId] = []
     }
@@ -10,8 +10,6 @@ export const groupBy = ( arr: Array<UserItem> ): Array<CompletedUser> => {
   
     return acc
   }, {})
-  console.log( 'OBJECTS', grouppedUsers )
-  console.log( 'ARRAYS', Object.values( grouppedUsers ) )
   return Object.values( grouppedUsers ).map( ( userData: Array<UserItem> ) => {
     return {
       info: userData,

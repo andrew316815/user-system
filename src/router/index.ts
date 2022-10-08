@@ -8,11 +8,8 @@ const routes: Array<RouteRecordRaw> = [
     component: UserPage,
   },
   {
-    path: '/graphics',
-    name: 'graphics',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: '/chart',
+    name: 'chart',
     component: () =>
       import( /* webpackChunkName: "about" */ '../views/ChartsPage.vue' ),
   },

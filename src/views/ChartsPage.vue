@@ -8,7 +8,7 @@
         :options="chartOptions"
       )
       .charts-page__label ID Пользователя 
-      .charts-page__label--vertical Количество успешных 'title'
+      .charts-page__label.charts-page__label--vertical Успешные/неуспешные 'title'
 </template>
 
 <script setup lang="ts">
@@ -49,11 +49,12 @@ const chartOptions = {
   &__chart
     height: 300px
   &__label
+    font-size: 14px
     &--vertical
       position: absolute
       transform: rotate(270deg)
       top: 140px
-      left: -75px
+      left: -65px
 
 .ct-series-a .ct-bar
   stroke: #07994a
